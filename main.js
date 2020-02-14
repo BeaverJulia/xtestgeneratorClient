@@ -65,7 +65,7 @@ function GetExercise(e)
 
 console.log(data)
 let exercisesList=[]
-  var obj =  JSON.parse( data)
+  var obj =  JSON.parse( ata)
   for (var j=0; j<obj.length; j++)
   {
     exercisesList.push(obj[j])
