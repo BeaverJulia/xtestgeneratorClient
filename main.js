@@ -1,5 +1,5 @@
 document.getElementById('ExerciseInputForm').addEventListener('submit', saveIssue);
-document.getElementById('FindExerciseInputForm').addEventListener('submit', GetExercise, fetchIssues);
+document.getElementById('FindExerciseInputForm').addEventListener('submit', GetExercise);
 function saveIssue(e) {
     var exerciseYear = document.getElementById('exerciseYear').value;
      var exerciseText = document.getElementById('exerciseText').value;
@@ -63,16 +63,20 @@ function GetExercise(e)
   .catch(error => console.log('error', error));
   e.preventDefault();
 
-console.log(getdata.JSON)
-function fetchIssues() {
-  var exercisesList =   data.JSON
+console.log(data)
+let exercisesList=[]
+  var obj =  JSON.parse( data)
+  for (var j=0; j<obj.length; j++)
+  {
+    exercisesList.push(obj[j])
+  }
   var issuesListe = document.getElementById('issuesList');
 
   issuesList.innerHTML = '';
 
-  for (var i = 0; i < exercisesList.length; i++) {
+  for (var i = 0; i <5; i++) {
     
-    var exerciseYear = exercisesList[i].exerciseYear
+    var exerciseYear = console.log( exercisesList[i].exerciseYear)
     var exerciseText = exercisesList[i].exerciseText
     var exerciseA = exercisesList[i].exerciseA
     var exerciseB = exercisesList[i].exerciseB
@@ -87,8 +91,8 @@ function fetchIssues() {
                               '<a href="#" onclick="Download()" class="btn btn-warning">Close</a> '+
                               '<a href="#" onclick="Delete()" class="btn btn-danger">Delete</a>'+
                               '</div>';
-    }
   }
+  
 }
   
 
@@ -108,28 +112,3 @@ function deleteIssue(id) {
   fetchIssues();
 }
 
-function fetchIssues() {
-  var exercisesList =  getdata
-  var issuesListe = document.getElementById('issuesList');
-
-  issuesList.innerHTML = '';
-
-  for (var i = 0; i < exercisesList.length; i++) {
-    
-    var exerciseYear = exercisesList[i].exerciseYear
-    var exerciseText = exercisesList[i].exerciseText
-    var exerciseA = exercisesList[i].exerciseA
-    var exerciseB = exercisesList[i].exerciseB
-    var exerciseC = exercisesList[i].exerciseC
-   
-    issuesList.innerHTML +=   '<div class="well">'+
-                              '<h6>Issue ID: ' + exerciseYear+ '</h6>'+
-                              '<p><span class="label label-info">' + exerciseText + '</span></p>'+
-                              '<h3>' + exerciseA + '</h3>'+
-                              '<p><span class="glyphicon glyphicon-time"></span> ' + exerciseB + '</p>'+
-                              '<p><span class="glyphicon glyphicon-user"></span> ' + exerciseC + '</p>'+
-                              '<a href="#" onclick="Download()" class="btn btn-warning">Close</a> '+
-                              '<a href="#" onclick="Delete()" class="btn btn-danger">Delete</a>'+
-                              '</div>';
-  }
-}
