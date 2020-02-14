@@ -1,2 +1,4 @@
-# JS Issue Tracker
-This is the *JS Issue Tracker* sample application from the tutorial *Pure JavaScript - Building A Real-World Application From Scratch*. You can find the tutorial on http://CodingTheSmartWay.com.
+This is the Client in JS written for C# Backend
+
+![Alt text](Test.JPG)
+![Alt text](Przechwytywanie.JPG)
