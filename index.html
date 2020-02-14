@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JS Issue Tracker</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  </head>
+  <body onload="fetchIssues()">
+    <div class="container">
+     
+     
+      <h1>TestsGenerator <small>Julia Gula</small></h1>
+      <div class="jumbotron">
+        <h3>Add New Exercise:</h3>
+        <form id="ExerciseInputForm">
+          <div class="form-group">
+            <label for="exerciseYear">For what year is this exercise?</label>
+            <select id="exerciseYear" class="form-control">
+              <option value="Low">1</option>
+              <option value="Medium">2</option>
+              <option value="High">3</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="exerciseText">Text</label>
+            <input type="text" class="form-control" id="exerciseText" placeholder="Question">
+          </div>
+          <div class="form-group">
+            <label for="exerciseA">Answer A</label>
+            <input type="text" class="form-control" id="exerciseA" placeholder="Enter answer A...">
+          </div>
+          <div class="form-group">
+            <label for="exerciseB">Answer B</label>
+            <input type="text" class="form-control" id="exerciseB" placeholder="Enter answer B...">
+          </div>
+          <div class="form-group">
+            <label for="exerciseC">Answer C</label>
+            <input type="text" class="form-control" id="exerciseC" placeholder="Enter answer C...">
+          </div>
+          <div class="form-group">
+            <label for="exerciseKey">Key</label>
+            <input type="text" class="form-control" id="exerciseKey" placeholder="Enter answer Key...">
+          </div>
+          <button type="submit" class="btn btn-primary">Add</button>
+        </form>
+      </div>
+      <div class="jumbotron">
+        <h3>Get Exercises by Year:</h3>
+        <form id="FindExerciseInputForm" >
+          <div class="form-group">
+            <label for="exerciseYearGet">For what year are the exercises</label>
+            <select id="exerciseYearGet" class="form-control">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary">Get</button>
+        </form>
+        <div class="jumbotron">
+          <h3>Add student:</h3>
+          <form id="ExerciseInputForm">
+            <div class="form-group">
+              <label for="exerciseYear">For what year is this exercise?</label>
+              <select id="exerciseYear" class="form-control">
+                <option value="Low">1</option>
+                <option value="Medium">2</option>
+                <option value="High">3</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="exerciseText">Text</label>
+              <input type="text" class="form-control" id="exerciseText" placeholder="Question">
+            </div>
+            <div class="form-group">
+              <label for="exerciseA">Answer A</label>
+              <input type="text" class="form-control" id="exerciseA" placeholder="Enter answer A...">
+            </div>
+            <div class="form-group">
+              <label for="exerciseB">Answer B</label>
+              <input type="text" class="form-control" id="exerciseB" placeholder="Enter answer B...">
+            </div>
+            <div class="form-group">
+              <label for="exerciseC">Answer C</label>
+              <input type="text" class="form-control" id="exerciseC" placeholder="Enter answer C...">
+            </div>
+            <div class="form-group">
+              <label for="exerciseKey">Key</label>
+              <input type="text" class="form-control" id="exerciseKey" placeholder="Enter answer Key...">
+            </div>
+            <button type="submit" class="btn btn-primary">Add</button>
+          </form>
+        </div>
+      </div>
+      <div class="col-lg-12">
+        <div id="issuesList">
+        </div>
+      </div>
+      
+    </div>
+    <script src="chance.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
